@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sneaker Shop</string>
+    <string name="titre_connexion">Connexion</string>
+    <string name="hint_nom">Nom d\'utilisateur</string>
+    <string name="hint_mot_de_passe">Mot de passe</string>
+    <string name="btn_connexion">Se connecter</string>
+</resources>
