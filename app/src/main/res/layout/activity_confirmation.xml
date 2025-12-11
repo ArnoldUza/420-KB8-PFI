@@ -1,10 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity_confirmation">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/txtTitre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commande réussie !"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp" />
+
+        <TextView
+            android:id="@+id/txtMerci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Merci pour votre achat !"
+            android:textSize="18sp"
+            android:textColor="#444444"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/txtTitre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgCheck"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_check"
+            android:contentDescription="Confirmation"
+            app:layout_constraintTop_toBottomOf="@id/txtMerci"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <VideoView
+            android:id="@+id/videoConfirm"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/imgCheck"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btnRetour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Retour"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/videoConfirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
