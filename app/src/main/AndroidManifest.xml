@@ -12,9 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PFIPhilipKArnoldU">
         <activity
+            android:name=".activity_confirmation"
+            android:exported="false" />
+        <activity
+            android:name=".activity_panier"
+            android:exported="false" />
+        <activity
+            android:name=".activity_item"
+            android:exported="false" />
+        <activity
+            android:name=".activity_produits"
+            android:exported="false" />
+        <activity
             android:name=".ConnexionActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

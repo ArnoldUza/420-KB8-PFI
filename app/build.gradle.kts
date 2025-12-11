@@ -32,8 +32,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
     buildFeatures {
-        compose = true
+        dataBinding = true
+        viewBinding = true
     }
+
 }
 
 dependencies {
@@ -49,6 +51,8 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+    implementation(libs.databinding.runtime)
+    implementation(libs.wear)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

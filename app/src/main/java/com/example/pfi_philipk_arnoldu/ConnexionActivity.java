@@ -1,76 +1,48 @@
-
 package com.example.pfi_philipk_arnoldu;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.VideoView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.databinding.DataBindingUtil;
 
-import com.example.pfi_philipk_arnoldu.Client;
+import com.example.pfi_philipk_arnoldu.databinding.ActivityConnexionBinding;
 
-/**
- * Activité de connexion pour l'application e-commerce
- * @author Arnold Uzabakiriho
- * @author Philip Kvaratshelya
- */
 public class ConnexionActivity extends AppCompatActivity {
 
-    private EditText txtNom;
-    private EditText txtMotDePasse;
-    private Button btnConnexion;
-    private VideoView videoConnexion;
+    private ActivityConnexionBinding binding;
     private MediaPlayer mpConnexion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_connexion);
 
-        // Initialisation des vues
-        txtNom = findViewById(R.id.txtNom);
-        txtMotDePasse = findViewById(R.id.txtMotDePasse);
-        btnConnexion = findViewById(R.id.btnConnexion);
-        videoConnexion = findViewById(R.id.videoConnexion);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_connexion);
 
-        // Configuration de la vidéo
+        Client client = new Client("", "");
+        binding.setClient(client);
+
         Uri uriVideo = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video_connexion);
-        videoConnexion.setVideoURI(uriVideo);
-        videoConnexion.setOnPreparedListener(mp -> {
+        binding.videoConnexion.setVideoURI(uriVideo);
+        binding.videoConnexion.setOnPreparedListener(mp -> {
             mp.setLooping(true);
-            videoConnexion.start();
+            binding.videoConnexion.start();
         });
 
-        // Musique de fond
         mpConnexion = MediaPlayer.create(this, R.raw.musique_connexion);
         mpConnexion.setLooping(true);
         mpConnexion.start();
 
-        // Bouton de connexion
-        btnConnexion.setOnClickListener(v -> {
-            String nom = txtNom.getText().toString().trim();
-            String motDePasse = txtMotDePasse.getText().toString().trim();
-
-            // Validation simple
-            if (nom.isEmpty() || motDePasse.isEmpty()) {
-                Toast.makeText(this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
+        binding.btnConnexion.setOnClickListener(v -> {
+            if (client.getNom().isEmpty() || client.getMotDePasse().isEmpty()) {
+                Toast.makeText(this, R.string.msg_remplir_champs, Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // Créer un objet Client
-            Client client = new Client(nom, motDePasse);
-
-            // Passer à l'activité suivante (liste des produits)
-            Intent intent = new Intent(ConnexionActivity.this, ListeProduitsActivity.class);
+            Intent intent = new Intent(this, ListeProduitsActivity.class);
             intent.putExtra("nomClient", client.getNom());
             startActivity(intent);
         });
@@ -90,8 +62,8 @@ public class ConnexionActivity extends AppCompatActivity {
         if (mpConnexion != null && !mpConnexion.isPlaying()) {
             mpConnexion.start();
         }
-        if (videoConnexion != null) {
-            videoConnexion.start();
+        if (binding.videoConnexion != null && !binding.videoConnexion.isPlaying()) {
+            binding.videoConnexion.start();
         }
     }
 
