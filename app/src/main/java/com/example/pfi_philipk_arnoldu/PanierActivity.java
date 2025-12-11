@@ -42,7 +42,7 @@ public class PanierActivity extends AppCompatActivity {
         });
     }
 
-    private void calculerTotal() {
+    public void calculerTotal() {
         new Thread(() -> {
             double total = 0;
             for (Produit p : PanierSingleton.getInstance().getProduits()) {
