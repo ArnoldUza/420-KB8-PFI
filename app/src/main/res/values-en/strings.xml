@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sneaker Shop</string>
+    <string name="titre_connexion">Login</string>
+    <string name="hint_nom">Username</string>
+    <string name="hint_mot_de_passe">Password</string>
+    <string name="btn_connexion">Sign In</string>
+    <string name="msg_remplir_champs">Please fill in all fields</string>
+
+    <!-- Product list -->
+    <string name="titre_produits">Our Products</string>
+
+    <!-- Product details -->
+    <string name="btn_ajouter_panier">Add to Cart</string>
+    <string name="notif_ajout_panier">Product added to cart!</string>
+
+    <!-- Cart -->
+    <string name="titre_panier">My Cart</string>
+    <string name="btn_vider">Empty Cart</string>
+    <string name="btn_commander">Place Order</string>
+    <string name="panier_vide">Your cart is empty</string>
+
+    <!-- Confirmation -->
+    <string name="titre_confirmation">Order Confirmed!</string>
+    <string name="msg_confirmation">Thank you for your purchase</string>
+    <string name="btn_retour">Back to Products</string>
+</resources>

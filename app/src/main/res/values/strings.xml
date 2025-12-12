@@ -5,5 +5,21 @@
     <string name="hint_mot_de_passe">Mot de passe</string>
     <string name="btn_connexion">Se connecter</string>
     <string name="msg_remplir_champs">Veuillez remplir tous les champs</string>
+    <!-- Liste des produits -->
+    <string name="titre_produits">Nos Produits</string>
 
+    <!-- Détails produit -->
+    <string name="btn_ajouter_panier">Ajouter au panier</string>
+    <string name="notif_ajout_panier">Produit ajouté au panier!</string>
+
+    <!-- Panier -->
+    <string name="titre_panier">Mon Panier</string>
+    <string name="btn_vider">Vider le panier</string>
+    <string name="btn_commander">Passer la commande</string>
+    <string name="panier_vide">Votre panier est vide</string>
+
+    <!-- Confirmation -->
+    <string name="titre_confirmation">Commande confirmée!</string>
+    <string name="msg_confirmation">Merci pour votre achat</string>
+    <string name="btn_retour">Retour aux produits</string>
 </resources>

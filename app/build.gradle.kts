@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.databinding.runtime)
     implementation(libs.wear)
+    implementation(libs.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
