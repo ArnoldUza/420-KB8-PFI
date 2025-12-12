@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.wear.activity.ConfirmationActivity;
 
 import com.example.pfi_philipk_arnoldu.databinding.ActivityPanierBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class PanierActivity extends AppCompatActivity {
 
@@ -36,13 +37,17 @@ public class PanierActivity extends AppCompatActivity {
         });
 
         binding.btnCommander.setOnClickListener(v -> {
-            Toast.makeText(this, "Commande passée", Toast.LENGTH_SHORT).show();
+            Snackbar.make(binding.getRoot(), "Commande réussie !", Snackbar.LENGTH_LONG)
+                    .setAction("OK", view -> {})
+                    .show();
+
             Intent intent = new Intent(this, ConfirmationActivity.class);
             startActivity(intent);
         });
+
     }
 
-    private void calculerTotal() {
+    public void calculerTotal() {
         new Thread(() -> {
             double total = 0;
             for (Produit p : PanierSingleton.getInstance().getProduits()) {

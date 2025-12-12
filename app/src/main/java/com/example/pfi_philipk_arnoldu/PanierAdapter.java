@@ -2,7 +2,6 @@ package com.example.pfi_philipk_arnoldu;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -44,7 +43,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.ViewHolder
             p.setQuantite(p.getQuantite() + 1);
             notifyItemChanged(position);
             if (context instanceof PanierActivity) {
-                ((PanierActivity) context).recreate();
+                ((PanierActivity) context).calculerTotal();
             }
         });
 
@@ -53,7 +52,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.ViewHolder
                 p.setQuantite(p.getQuantite() - 1);
                 notifyItemChanged(position);
                 if (context instanceof PanierActivity) {
-                    ((PanierActivity) context).recreate();
+                    ((PanierActivity) context).calculerTotal();
                 }
             }
         });
@@ -63,7 +62,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.ViewHolder
             notifyItemRemoved(position);
             notifyItemRangeChanged(position, produits.size());
             if (context instanceof PanierActivity) {
-                ((PanierActivity) context).recreate();
+                ((PanierActivity) context).calculerTotal();
             }
         });
     }
@@ -82,4 +81,3 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.ViewHolder
         }
     }
 }
-
