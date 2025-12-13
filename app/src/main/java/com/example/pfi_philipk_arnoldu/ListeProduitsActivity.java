@@ -1,3 +1,4 @@
+//Arnold Uzabakiriho
 package com.example.pfi_philipk_arnoldu;
 
 import android.media.MediaPlayer;
@@ -80,5 +81,31 @@ public class ListeProduitsActivity extends AppCompatActivity{
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(mpListe != null && mpListe.isPlaying()) {
+            mpListe.pause();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(mpListe != null && !mpListe.isPlaying()) {
+            mpListe.start();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(mpListe != null) {
+            mpListe.stop();
+            mpListe.release();
+            mpListe = null;
+        }
     }
 }
