@@ -1,3 +1,4 @@
+//Philip panier singleton
 package com.example.pfi_philipk_arnoldu;
 
 import java.util.ArrayList;

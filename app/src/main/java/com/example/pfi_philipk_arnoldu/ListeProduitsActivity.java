@@ -1,48 +1,52 @@
-//Arnold Uzabakiriho
+// Arnold listes des produits
 package com.example.pfi_philipk_arnoldu;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuItem;
-import com.example.pfi_philipk_arnoldu.databinding.ActivityListeProduitsBinding;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+
+import com.example.pfi_philipk_arnoldu.databinding.ActivityListeProduitsBinding;
 
 import java.util.ArrayList;
 
-public class ListeProduitsActivity extends AppCompatActivity{
+public class ListeProduitsActivity extends AppCompatActivity {
 
     private ActivityListeProduitsBinding binding;
     private ArrayList<Produit> listeProduits;
     private ProduitsAdapter adapter;
     private MediaPlayer mpListe;
     private String nomClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_liste_produits);
 
-        //Récupérer le nom du client
+        binding = ActivityListeProduitsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
         nomClient = getIntent().getStringExtra("nomClient");
-        if(nomClient != null){
+        if (nomClient != null) {
             setTitle("Bienvenue " + nomClient + "!");
         }
 
         binding.recyclerProduits.setLayoutManager(new GridLayoutManager(this, 2));
 
-        //Créer la liste de produits
         creerListeProduits();
 
-        //Adapter
         adapter = new ProduitsAdapter(listeProduits, this);
         binding.recyclerProduits.setAdapter(adapter);
 
-        //Musique de fond
+        binding.btnVoirPanier.setOnClickListener(v -> {
+            Intent intent = new Intent(this, PanierActivity.class);
+            intent.putExtra("nomClient", nomClient);
+            startActivity(intent);
+        });
+
         mpListe = MediaPlayer.create(this, R.raw.musique_liste);
-        if(mpListe != null) {
+        if (mpListe != null) {
             mpListe.setLooping(true);
             mpListe.start();
         }
@@ -63,30 +67,10 @@ public class ListeProduitsActivity extends AppCompatActivity{
                 "Classique intemporel"));
     }
 
-    @Overrride
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_principal, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if(id == R.id.action_panier) {
-            Intent intent = new Intent(this, PanierActivity.class);
-            intent.putExtra("nomClient", nomClient);
-            startActivity(intent);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     @Override
     protected void onPause() {
         super.onPause();
-        if(mpListe != null && mpListe.isPlaying()) {
+        if (mpListe != null && mpListe.isPlaying()) {
             mpListe.pause();
         }
     }
@@ -94,7 +78,7 @@ public class ListeProduitsActivity extends AppCompatActivity{
     @Override
     protected void onResume() {
         super.onResume();
-        if(mpListe != null && !mpListe.isPlaying()) {
+        if (mpListe != null && !mpListe.isPlaying()) {
             mpListe.start();
         }
     }
@@ -102,7 +86,7 @@ public class ListeProduitsActivity extends AppCompatActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(mpListe != null) {
+        if (mpListe != null) {
             mpListe.stop();
             mpListe.release();
             mpListe = null;

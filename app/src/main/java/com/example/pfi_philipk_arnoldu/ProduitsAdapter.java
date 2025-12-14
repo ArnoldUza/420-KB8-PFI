@@ -1,4 +1,4 @@
-// Philip Kvaratshelya, Arnold Uzabakiriho
+// Arnold adaptateur recycleur produits
 package com.example.pfi_philipk_arnoldu;
 
 import android.content.Context;

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- App -->
     <string name="app_name">Sneaker Shop</string>
+
+    <!-- Login -->
     <string name="titre_connexion">Login</string>
     <string name="hint_nom">Username</string>
     <string name="hint_mot_de_passe">Password</string>
@@ -9,19 +13,31 @@
 
     <!-- Product list -->
     <string name="titre_produits">Our Products</string>
+    <string name="btn_voir_panier">View Cart</string>
 
     <!-- Product details -->
+    <string name="detail_nom_produit">Product name</string>
+    <string name="detail_prix_produit">199.99 $</string>
+    <string name="detail_description_produit">Product description</string>
     <string name="btn_ajouter_panier">Add to Cart</string>
     <string name="notif_ajout_panier">Product added to cart!</string>
 
     <!-- Cart -->
     <string name="titre_panier">My Cart</string>
-    <string name="btn_vider">Empty Cart</string>
-    <string name="btn_commander">Place Order</string>
+    <string name="btn_vider_panier">Empty Cart</string>
+    <string name="btn_passer_commande">Place Order</string>
     <string name="panier_vide">Your cart is empty</string>
+    <string name="total_label">Total: </string>
 
-    <!-- Confirmation -->
-    <string name="titre_confirmation">Order Confirmed!</string>
-    <string name="msg_confirmation">Thank you for your purchase</string>
-    <string name="btn_retour">Back to Products</string>
+    <!-- Quantity -->
+    <string name="btn_moins">-</string>
+    <string name="btn_plus">+</string>
+    <string name="btn_retirer">Remove</string>
+
+    <!-- Order confirmation -->
+    <string name="commande_reussie">Order Successful!</string>
+    <string name="merci_achat">Thank you for your purchase!</string>
+    <string name="confirmation_image">Confirmation</string>
+    <string name="btn_retour">Back</string>
+
 </resources>

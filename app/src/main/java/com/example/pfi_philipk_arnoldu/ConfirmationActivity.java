@@ -1,3 +1,5 @@
+// Philip page de confirmation
+
 package com.example.pfi_philipk_arnoldu;
 
 import android.media.MediaPlayer;

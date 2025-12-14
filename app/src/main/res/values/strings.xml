@@ -1,25 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- App -->
     <string name="app_name">Sneaker Shop</string>
+
+    <!-- Connexion -->
     <string name="titre_connexion">Connexion</string>
-    <string name="hint_nom">Nom d\'utilisateur</string>
+    <string name="hint_nom">Nom d utilisateur</string>
     <string name="hint_mot_de_passe">Mot de passe</string>
     <string name="btn_connexion">Se connecter</string>
     <string name="msg_remplir_champs">Veuillez remplir tous les champs</string>
-    <!-- Liste des produits -->
-    <string name="titre_produits">Nos Produits</string>
 
-    <!-- Détails produit -->
+    <!-- Produits -->
+    <string name="titre_produits">Nos Produits</string>
+    <string name="detail_nom_produit">Nom du produit</string>
+    <string name="detail_prix_produit">199.99 $</string>
+    <string name="detail_description_produit">Description du produit</string>
     <string name="btn_ajouter_panier">Ajouter au panier</string>
     <string name="notif_ajout_panier">Produit ajouté au panier!</string>
 
     <!-- Panier -->
     <string name="titre_panier">Mon Panier</string>
-    <string name="btn_vider">Vider le panier</string>
-    <string name="btn_commander">Passer la commande</string>
+    <string name="btn_voir_panier">Voir le panier</string>
+    <string name="btn_vider_panier">Vider le panier</string>
+    <string name="btn_passer_commande">Passer la commande</string>
     <string name="panier_vide">Votre panier est vide</string>
+    <string name="total_label">Total : </string>
+
+    <!-- Quantité -->
+    <string name="btn_moins">-</string>
+    <string name="btn_plus">+</string>
+    <string name="btn_retirer">Retirer</string>
 
     <!-- Confirmation -->
-    <string name="titre_confirmation">Commande confirmée!</string>
-    <string name="msg_confirmation">Merci pour votre achat</string>
-    <string name="btn_retour">Retour aux produits</string>
+    <string name="commande_reussie">Commande réussie !</string>
+    <string name="merci_achat">Merci pour votre achat !</string>
+    <string name="confirmation_image">Confirmation</string>
+    <string name="btn_retour">Retour</string>
+
 </resources>

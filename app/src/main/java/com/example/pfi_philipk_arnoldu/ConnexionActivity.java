@@ -1,3 +1,5 @@
+// Arnold page de connexion
+
 package com.example.pfi_philipk_arnoldu;
 
 import android.content.Intent;

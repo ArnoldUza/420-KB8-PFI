@@ -1,3 +1,5 @@
+// Panier
+
 package com.example.pfi_philipk_arnoldu;
 
 import android.content.Intent;
@@ -8,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.wear.activity.ConfirmationActivity;
+
 
 import com.example.pfi_philipk_arnoldu.databinding.ActivityPanierBinding;
 import com.google.android.material.snackbar.Snackbar;

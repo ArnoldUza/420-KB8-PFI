@@ -11,10 +11,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
-        android:background="@color/white">
+        android:padding="16dp">
 
-        <!-- LISTE DES PRODUITS DANS LE PANIER -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerPanier"
             android:layout_width="0dp"
@@ -23,10 +21,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/layoutBas"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:clipToPadding="false" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- BARRE DU BAS : TOTAL + BOUTONS -->
         <LinearLayout
             android:id="@+id/layoutBas"
             android:layout_width="0dp"
@@ -37,42 +33,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
-            <!-- TOTAL -->
             <TextView
                 android:id="@+id/txtTotal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='@{"Total : " + String.valueOf(total) + " $"}'
-                android:textColor="#000000"
+                android:text='@{@string/total_label + String.valueOf(total) + " $"}'
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:padding="8dp" />
 
-            <!-- BOUTONS -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
-                android:paddingTop="8dp">
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/btnVider"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Vider le panier"
-                    android:backgroundTint="@color/design_default_color_error" />
+                    android:text="@string/btn_vider_panier" />
 
                 <Button
                     android:id="@+id/btnCommander"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Passer la commande"
                     android:layout_marginStart="8dp"
-                    android:backgroundTint="@color/design_default_color_primary" />
+                    android:text="@string/btn_passer_commande" />
             </LinearLayout>
 
         </LinearLayout>
