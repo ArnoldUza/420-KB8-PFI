@@ -14,7 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.example.pfi_philipk_arnoldu.databinding.ActivityConfirmationBinding;
-
+/**
+ * Activité de confirmation affichée après une commande réussie
+ * @author Arnold Uzabakiriho
+ * @author Philip Kvaratshelya
+ */
 public class ConfirmationActivity extends AppCompatActivity {
 
     private ActivityConfirmationBinding binding;

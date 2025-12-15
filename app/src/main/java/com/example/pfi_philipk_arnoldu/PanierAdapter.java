@@ -11,7 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pfi_philipk_arnoldu.databinding.ItemPanierBinding;
 
 import java.util.ArrayList;
-
+/**
+ * Adapter pour afficher les produits dans le panier avec RecyclerView
+ * @author Arnold Uzabakiriho
+ * @author Philip Kvaratshelya
+ */
 public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.ViewHolder> {
 
     private final ArrayList<Produit> produits;
