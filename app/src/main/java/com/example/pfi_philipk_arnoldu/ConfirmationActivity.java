@@ -28,7 +28,7 @@ public class ConfirmationActivity extends AppCompatActivity {
 
         String nomClient = getIntent().getStringExtra("nomClient");
         if (nomClient != null) {
-            binding.txtMerci.setText("Merci " + nomClient + " !");
+            binding.txtMerci.setText(getString(R.string.merci_client, nomClient));
         }
 
         Animation bounce = AnimationUtils.loadAnimation(this, R.anim.bounce);

@@ -43,26 +43,38 @@
                 android:gravity="center"
                 android:padding="8dp" />
 
+            <!-- BOUTONS -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:paddingTop="8dp">
+
+                <Button
+                    android:id="@+id/btnRetourProduits"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_retour_produits"
+                    android:layout_marginEnd="4dp" />
 
                 <Button
                     android:id="@+id/btnVider"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/btn_vider_panier" />
+                    android:text="@string/btn_vider_panier"
+                    android:layout_marginEnd="4dp"
+                    android:backgroundTint="@color/design_default_color_error" />
 
                 <Button
                     android:id="@+id/btnCommander"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/btn_passer_commande" />
+                    android:text="@string/btn_passer_commande"
+                    android:backgroundTint="@color/design_default_color_primary" />
             </LinearLayout>
 
         </LinearLayout>

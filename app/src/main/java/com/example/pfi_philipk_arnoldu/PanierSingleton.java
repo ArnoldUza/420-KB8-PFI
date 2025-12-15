@@ -3,6 +3,11 @@ package com.example.pfi_philipk_arnoldu;
 
 import java.util.ArrayList;
 
+/**
+ * Singleton qui gère le panier d'achat partagé entre toutes les activités
+ * @author Arnold Uzabakiriho
+ * @author Philip Kvaratshelya
+ */
 public class PanierSingleton {
 
     private static PanierSingleton instance;

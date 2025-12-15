@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PFIPhilipKArnoldU">
 
-        <!-- 🔑 ACTIVITÉ DE DÉPART -->
+        <!-- ACTIVITÉ DE DÉPART -->
         <activity
             android:name=".ConnexionActivity"
             android:exported="true">

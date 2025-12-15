@@ -12,6 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pfi_philipk_arnoldu.databinding.ActivityDetailProduitBinding;
 
+/**
+ * Activité qui affiche les détails d'un produit avec vidéo et animation
+ * @author Arnold Uzabakiriho
+ * @author Philip Kvaratshelya
+ */
 public class DetailProduitActivity extends AppCompatActivity {
 
     private ActivityDetailProduitBinding binding;

@@ -15,6 +15,7 @@
     <string name="titre_produits">Nos Produits</string>
     <string name="detail_nom_produit">Nom du produit</string>
     <string name="detail_prix_produit">199.99 $</string>
+    <string name="btn_deconnexion">Déconnexion</string>
     <string name="detail_description_produit">Description du produit</string>
     <string name="btn_ajouter_panier">Ajouter au panier</string>
     <string name="notif_ajout_panier">Produit ajouté au panier!</string>
@@ -24,6 +25,7 @@
     <string name="btn_voir_panier">Voir le panier</string>
     <string name="btn_vider_panier">Vider le panier</string>
     <string name="btn_passer_commande">Passer la commande</string>
+    <string name="btn_retour_produits">Retourner</string>
     <string name="panier_vide">Votre panier est vide</string>
     <string name="total_label">Total : </string>
 
@@ -36,6 +38,7 @@
     <string name="commande_reussie">Commande réussie !</string>
     <string name="merci_achat">Merci pour votre achat !</string>
     <string name="confirmation_image">Confirmation</string>
+    <string name="merci_client">Merci %s !</string>
     <string name="btn_retour">Retour</string>
 
 </resources>

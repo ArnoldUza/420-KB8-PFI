@@ -13,6 +13,7 @@
 
     <!-- Product list -->
     <string name="titre_produits">Our Products</string>
+    <string name="btn_deconnexion">Log out</string>
     <string name="btn_voir_panier">View Cart</string>
 
     <!-- Product details -->
@@ -26,6 +27,7 @@
     <string name="titre_panier">My Cart</string>
     <string name="btn_vider_panier">Empty Cart</string>
     <string name="btn_passer_commande">Place Order</string>
+    <string name="btn_retour_produits">Continue shopping</string>
     <string name="panier_vide">Your cart is empty</string>
     <string name="total_label">Total: </string>
 
@@ -38,6 +40,7 @@
     <string name="commande_reussie">Order Successful!</string>
     <string name="merci_achat">Thank you for your purchase!</string>
     <string name="confirmation_image">Confirmation</string>
+    <string name="merci_client">Thank you %s!</string>
     <string name="btn_retour">Back</string>
 
 </resources>

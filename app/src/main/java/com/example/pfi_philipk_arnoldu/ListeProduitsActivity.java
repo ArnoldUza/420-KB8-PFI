@@ -12,6 +12,11 @@ import com.example.pfi_philipk_arnoldu.databinding.ActivityListeProduitsBinding;
 
 import java.util.ArrayList;
 
+/**
+ * Activité qui affiche la liste des produits disponibles
+ * @author Arnold Uzabakiriho
+ * @author Philip Kvaratshelya
+ */
 public class ListeProduitsActivity extends AppCompatActivity {
 
     private ActivityListeProduitsBinding binding;
@@ -50,6 +55,13 @@ public class ListeProduitsActivity extends AppCompatActivity {
             mpListe.setLooping(true);
             mpListe.start();
         }
+
+        binding.btnDeconnexion.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ConnexionActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+        });
     }
 
     private void creerListeProduits() {

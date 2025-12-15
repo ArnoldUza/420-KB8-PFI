@@ -38,13 +38,22 @@ public class PanierActivity extends AppCompatActivity {
             calculerTotal();
         });
 
-        binding.btnCommander.setOnClickListener(v -> {
-            Snackbar.make(binding.getRoot(), "Commande réussie !", Snackbar.LENGTH_LONG)
-                    .setAction("OK", view -> {})
-                    .show();
+        binding.btnRetourProduits.setOnClickListener(v -> {
+            finish();
+        });
 
-            Intent intent = new Intent(this, ConfirmationActivity.class);
-            startActivity(intent);
+        binding.btnCommander.setOnClickListener(v -> {
+            if (PanierSingleton.getInstance().getProduits().isEmpty()) {
+                Toast.makeText(this, "Votre panier est vide!", Toast.LENGTH_SHORT).show();
+            } else {
+                Intent intent = new Intent(this, ConfirmationActivity.class);
+                String nomClient = getIntent().getStringExtra("nomClient");
+                intent.putExtra("nomClient", nomClient);
+                intent.putExtra("panierVide", false);
+                startActivity(intent);
+                PanierSingleton.getInstance().vider();
+                finish();
+            }
         });
 
     }
