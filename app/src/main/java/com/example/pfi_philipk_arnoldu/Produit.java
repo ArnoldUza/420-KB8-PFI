@@ -2,6 +2,11 @@
 package com.example.pfi_philipk_arnoldu;
 
 import java.io.Serializable;
+/**
+ *  classe d'un produit
+ * @author Arnold Uzabakiriho
+ * @author Philip Kvaratshelya
+ */
 public class Produit implements Serializable {
     private String nom;
     private double prix;

@@ -12,6 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.example.pfi_philipk_arnoldu.databinding.ActivityConnexionBinding;
+/**
+ * Activité de connexion pour l'application e-commerce de sneakers
+ * @author Arnold Uzabakiriho
+ * @author Philip Kvaratshelya
+ */
 
 public class ConnexionActivity extends AppCompatActivity {
 

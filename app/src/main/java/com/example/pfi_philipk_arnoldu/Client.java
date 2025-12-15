@@ -1,7 +1,8 @@
-// Arnold Classe représentant un client du commerce électronique
+// Arnold
 package com.example.pfi_philipk_arnoldu;
 
 /**
+ * Classe représentant un client du commerce électronique
  * @author Arnold Uzabakiriho
  * @author Philip Kvaratshelya
  */
